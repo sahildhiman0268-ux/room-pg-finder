@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 1000px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* Search */
+.search-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.search-box input,
+.search-box select {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+  min-width: 180px;
+}
+
+.search-box button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Sections */
+.locations,
+.rooms {
+  padding: 60px 8%;
+}
+
+.locations h2,
+.rooms h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+/* Locations */
+.location-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.location-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Rooms */
+.room-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.room-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+.room-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-info {
+  padding: 18px;
+  background: white;
+}
+
+.room-info h3 {
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.room-info p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.room-info h4 {
+  margin: 12px 0;
+  color: #2563eb;
+}
+/* Room Details Popup */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  width: 450px;
+  max-width: 100%;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-image {
+  height: 180px;
+  background: #dbeafe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+.modal-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.modal h3 {
+  color: #2563eb;
+  margin: 15px 0;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.room-image {
+  height: 180px;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.room-info {
+  padding: 20px;
+}
+
+.room-info h3 {
+  margin-bottom: 10px;
+}
+
+.room-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.room-info h4 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.room-info button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box select,
+  .search-box button {
+    width: 100%;
+    min-width: auto;
+    padding: 14px;
+  }
+
+  .location-cards,
+  .room-container {
+    grid-template-columns: 1fr;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  width: min(450px, 100%);
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.modal-image {
+  height: 180px;
+  background: #dbeafe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+.modal p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.modal h3 {
+  color: #2563eb;
+  margin: 15px 0;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+.login-modal {
+  max-width: 400px;
+}
+
+.login-modal input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.login-modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-modal .contact-btn {
+  margin-top: 10px;
+}
+
+.login-modal p {
+  text-align: center;
+  margin-top: 15px;
+}
