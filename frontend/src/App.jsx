@@ -201,13 +201,37 @@ useEffect(() => {
       {/* Popular Locations */}
       <section className="locations">
         <h2>Popular Locations</h2>
-
         <div className="location-cards">
-          <div className="location-card">📍 Shimla</div>
-          <div className="location-card">📍 Chandigarh</div>
-          <div className="location-card">📍 Delhi</div>
-          <div className="location-card">📍 Dharamshala</div>
-        </div>
+  <div className="location-card" onClick={() => {
+    setLocation("Shimla");
+    document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" });
+  }}>
+    📍 Shimla
+  </div>
+
+  <div className="location-card" onClick={() => {
+    setLocation("Chandigarh");
+    document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" });
+  }}>
+    📍 Chandigarh
+  </div>
+
+  <div className="location-card" onClick={() => {
+    setLocation("Delhi");
+    document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" });
+  }}>
+    📍 Delhi
+  </div>
+
+  <div className="location-card" onClick={() => {
+    setLocation("Dharamshala");
+    document.getElementById("rooms")?.scrollIntoView({ behavior: "smooth" });
+  }}>
+    📍 Dharamshala
+  </div>
+</div>
+
+        
       </section>
 
       {/* Rooms */}
