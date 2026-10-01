@@ -73,7 +73,7 @@ function App() {
   const [allRooms, setAllRooms] = useState(rooms);
 
 useEffect(() => {
-  fetch("http://localhost:5000/rooms")
+  fetch("https://room-pg-finder-j6wz.onrender.com/rooms")
     .then((res) => res.json())
     .then((data) => {
       const roomsWithImages = data.map((dbRoom) => {
