@@ -450,3 +450,44 @@ footer p {
   text-align: center;
   margin-top: 15px;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 12px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 530px;
+    margin: 25px auto;
+  }
+
+  .search-box input,
+  .search-box select {
+    width: 100%;
+  }
+}
