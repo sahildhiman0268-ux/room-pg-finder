@@ -242,6 +242,9 @@ useEffect(() => {
             ? `Available Rooms (${results.length})`
             : "No Rooms Found"}
         </h2>
+        <p style={{ textAlign: "center", fontSize: "20px" }}>
+        {results.length === 0 && "No Rooms Found / Not Available"}
+        </p>
 
         <div className="room-container">
 
